@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.github.georgwittberger.spring-boot-angularjs-demo</groupId>
+  <artifactId>spring-boot-angularjs-demo</artifactId>
+  <version>0.0.1</version>
+  <packaging>jar</packaging>
+
+  <name>spring-boot-angularjs-demo</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>pl.allegro</groupId>
+        <artifactId>grunt-maven-plugin</artifactId>
+        <version>1.5.1</version>
+        <configuration>
+          <gruntOptions>
+            <gruntOption>--verbose</gruntOption>
+          </gruntOptions>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>create-resources</goal>
+              <goal>npm</goal>
+              <goal>bower</goal>
+              <goal>grunt</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

@@ -1,0 +1,13 @@
+{
+  "name": "angularjs-typescript-demo",
+  "description": "AngularJS with TypeScript demo",
+  "authors": [
+    "Georg Wittberger"
+  ],
+  "license": "MIT",
+  "moduleType": [
+    "es6"
+  ],
+  "homepage": "https://github.com/georgwittberger/spring-boot-angularjs-demo",
+  "private": true
+}
