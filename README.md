@@ -1,18 +1,23 @@
 # Spring Boot + AngularJS demo #
 
-> Demo project for the integration of Spring Boot and AngularJS using TypeScript, Maven and Grunt
+> Demo for the integration of Spring Boot and AngularJS using TypeScript, Maven and Grunt
 
-This demo project shows how to integrate an AngularJS app into a Spring Boot application. Furthermore, it proposes a build lifecycle which allows you to write the AngularJS app in TypeScript and have Maven compile it into a minified JavaScript file using a Grunt plugin.
+This demo project shows how to
+
+- Write an AngularJS app in TypeScript
+- Compile TypeScript sources into a single minified JavaScript file using Grunt
+- Embed the Grunt build into the Maven build lifecycle
+- Integrate an AngularJS app with a Spring Boot web application using the `$http` service and Spring `@RestController`
 
 ## Getting started ##
 
 Please make sure to have the following software components installed in order to build the demo project:
 
-- Java Development Kit (version 6 or better)
-- Maven (version 3 or better)
-- Node.js (version 0.10 or better)
-- Global installation of Grunt (version 0.4.0 or better) - run: `npm install -g grunt-cli`
-- Global installation of Bower (version 1.6 or better) - run: `npm install -g bower`
+- [Java Development Kit](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (version 6 or better)
+- [Maven](https://maven.apache.org/) (version 3 or better)
+- [Node.js](https://nodejs.org/) (version 0.10 or better)
+- Global installation of [Grunt](http://gruntjs.com/) (version 0.4.0 or better) - run: `npm install -g grunt-cli`
+- Global installation of [Bower](http://bower.io/) (version 1.6 or better) - run: `npm install -g bower`
 
 Build the project with Maven:
 
@@ -30,13 +35,13 @@ Open the demo web page in your browser: [http://localhost:8080/](http://localhos
 
 The Java web application resides in `src/main/java`. This tiny server app is made of three files:
 
-- `Application.java`: Bootstrapper class with the entry point for the application.
-- `DemoController.java`: Simple Spring REST controller which exposes the resource `/api/person` and delivers a dummy person object when the resource is queried.
-- `Person.java`: Java POJO class which represents a person and is used by the controller to respond with an appropriate JSON message.
+- `Application.java`: Start class with the entry point for the application.
+- `DemoController.java`: Simple Spring REST controller which serves a person object as JSON message on the URL path `/api/person`.
+- `Person.java`: Java POJO class which defines person objects and is used by the controller.
 
 ### AngularJS application ###
 
-The AngularJS web application resides in `src/main/webapp/static`. This directory contains a web project which could be developed independently of the Java application or the Maven project where it is embedded. It contains the following files:
+The AngularJS web application resides in `src/main/webapp/static`. This directory contains a web project which could be developed independently of the surrounding Maven project. It contains the following files:
 
 - `bower.json`: Bower configuration which defines the dependency to `angular`.
 - `Gruntfile.js`: Grunt build configuration which defines the tasks to complete when building the project.
@@ -58,7 +63,7 @@ The Spring Boot application is built using Maven. The Java classes are compiled 
 - Minify the produced JavaScript files
 - Copy the HTML and JavaScript files to the `static` folder of the Maven output directory
 
-Once the Grunt build has finished the compiled resources of the AngularJS app are located in `target/classes/static` and so they packaged into the JAR file along with the Spring Boot application classes.
+Once the Grunt build has finished the compiled resources of the AngularJS app are located in `target/classes/static` and so they are packaged into the JAR file along with the Spring Boot application classes.
 
 ## License ##
 
