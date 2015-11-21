@@ -1,5 +1,5 @@
 {
-  "name": "angularjs-typescript-demo",
+  "name": "angularjs-demo",
   "version": "0.0.1",
   "description": "AngularJS with TypeScript demo",
   "keywords": ["angularjs", "typescript", "grunt"],
@@ -18,7 +18,9 @@
   },
   "devDependencies": {
     "grunt": "~0.4.5",
-    "grunt-contrib-uglify": "~0.10.1",
-    "grunt-ts": "~5.1.1"
+    "grunt-contrib-concat": "~0.5.1",
+    "grunt-contrib-copy": "~0.8.2",
+    "grunt-contrib-uglify": "~0.11.0",
+    "grunt-ts": "~5.2.0"
   }
 }

@@ -1,13 +1,16 @@
 {
-  "name": "angularjs-typescript-demo",
+  "name": "angularjs-demo",
   "description": "AngularJS with TypeScript demo",
   "authors": [
-    "Georg Wittberger"
+    { "name": "Georg Wittberger", "email": "georg.wittberger@gmail.com" }
   ],
   "license": "MIT",
   "moduleType": [
     "es6"
   ],
   "homepage": "https://github.com/georgwittberger/spring-boot-angularjs-demo",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.8"
+  }
 }

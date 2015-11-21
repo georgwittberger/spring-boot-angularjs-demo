@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="demo">
+  <head>
+    <meta charset="utf-8">
+    <title>Spring Boot + AngularJS demo</title>
+    <script src="js/angularjs-demo-complete.min.js"></script>
+  </head>
+  <body data-ng-controller="demo.DemoController">
+    <h1>Spring Boot + AngularJS demo</h1>
+    <p>Click the button to fetch the person...</p>
+    <p><button data-ng-click="fetchPerson()">Fetch person</button></p>
+    <p data-ng-if="person">First name: {{person.firstName}}<br>
+      Last name: {{person.lastName}}</p>
+  </body>
+</html>
